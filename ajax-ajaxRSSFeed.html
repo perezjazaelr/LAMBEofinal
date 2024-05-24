@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="ajax()">PHP AJAX</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP - AJAX RSS Feed Example</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">RSS which stands for Really Simple Syndication, is used 
+                    to publish often updated information from websites like audio, video, 
+                    images, etc. We can integrate RSS feeds to a website by using AJAX and PHP. 
+                    This code demonstrates how to show RSS feeds in our site.</h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">   $q = $_GET["q"];</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">   if($q == "cnn") {</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">      $xml = ("http://rss.cnn.com/rss/cnn_topstories.rss");</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">   } elseif($q == "bbc") {</span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">      $xml = ("http://newsrss.bbc.co.uk/rss/newsonline_world_edition/americas/rss.xml");</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">   } elseif($q = "pcw"){</span></p>
+                        <p><span class="numbers">9.</span><span class="yellow">      $xml = ("http://www.pcworld.com/index.rss");</span></p>
+                        <p><span class="numbers">10.</span><span class="yellow">   }</span></p>
+                        <p><span class="numbers">11.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">12.</span><span class="yellow">   $xmlDoc = new DOMDocument();</span></p>
+                        <p><span class="numbers">13.</span><span class="yellow">   $xmlDoc->load($xml);</span></p>
+                        <p><span class="numbers">14.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">15.</span><span class="yellow">   $channel = $xmlDoc->getElementsByTagName('channel')->item(0);</span></p>
+                        <p><span class="numbers">16.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">17.</span><span class="yellow">   $channel_title = $channel->getElementsByTagName('title')</span></p>
+                        <p><span class="numbers">18.</span><span class="yellow">   ->item(0)->childNodes->item(0)->nodeValue;</span></p>
+                        <p><span class="numbers">19.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">20.</span><span class="yellow">   $channel_link = $channel->getElementsByTagName('link')</span></p>
+                        <p><span class="numbers">21.</span><span class="yellow">   ->item(0)->childNodes->item(0)->nodeValue;</span></p>
+                        <p><span class="numbers">22.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">23.</span><span class="yellow">   $channel_desc = $channel->getElementsByTagName('description')</span></p>
+                        <p><span class="numbers">24.</span><span class="yellow">   ->item(0)->childNodes->item(0)->nodeValue;</span></p>
+                        <p><span class="numbers">25.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">26.</span><span class="yellow">   echo("&ltp&gt&lt;a href = '" . $channel_link . "'&gt;" . </span></p>
+                        <p><span class="numbers">27.</span><span class="yellow">      $channel_title . "&lt/a&gt;");</span></p>
+                        <p><span class="numbers">28.</span><span class="yellow">   echo("&ltbr&gt");</span></p>
+                        <p><span class="numbers">29.</span><span class="yellow">   echo($channel_desc . "&lt/p&gt");</span></p>
+                        <p><span class="numbers">30.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">31.</span><span class="yellow">   $x = $xmlDoc->getElementsByTagName('item');</span></p>
+                        <p><span class="numbers">32.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">33.</span><span class="yellow">   for ($i = 0; $i&lt;=2; $i++) {</span></p>
+                        <p><span class="numbers">34.</span><span class="yellow">      $item_title = $x->item($i)->getElementsByTagName('title')</span></p>
+                        <p><span class="numbers">35.</span><span class="yellow">      ->item(0)->childNodes->item(0)->nodeValue;</span></p>
+                        <p><span class="numbers">36.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">37.</span><span class="yellow">      $item_link = $x->item($i)->getElementsByTagName('link')</span></p>
+                        <p><span class="numbers">38.</span><span class="yellow">      ->item(0)->childNodes->item(0)->nodeValue;</span></p>
+                        <p><span class="numbers">39.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">40.</span><span class="yellow">      $item_desc = $x->item($i)->getElementsByTagName('description')</span></p>
+                        <p><span class="numbers">41.</span><span class="yellow">      ->item(0)->childNodes->item(0)->nodeValue;</span></p>
+                        <p><span class="numbers">42.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">43.</span><span class="yellow">      echo ("&ltp&gt&lt;a href = '" . $item_link . "'&gt;" . $item_title . "&lt/a&gt;");</span></p>
+                        <p><span class="numbers">44.</span><span class="yellow">      echo ("&ltbr&gt");</span></p>
+                        <p><span class="numbers">45.</span><span class="yellow">      echo ($item_desc . "&lt/p&gt;");</span></p>
+                        <p><span class="numbers">46.</span><span class="yellow">   }</span></p>
+                        <p><span class="numbers">47.</span><span class="pink">?&gt</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

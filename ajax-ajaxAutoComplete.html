@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="ajax()">PHP AJAX</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP - AJAX Auto Complete Search</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">Autocomplete feature is a typeahead mechanism to show 
+                    input suggestions as the user enters data in the search box provided. 
+                    It is also called live search because it reacts to the users' input. 
+                    In this example, we shall use AJAX and XML parser in PHP to demonstrate 
+                    the use of autocomplete textboxes.</h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">   $xml_doc = new DOMDocument();</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">   $xml_doc->load('autocomplete.xml');</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">   $x = $xml_doc->getElementsByTagName('link');</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">   $q = $_GET['q'];</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">   $result = '';</span></p>
+                        <p><span class="numbers">9.</span><span class="yellow">   foreach($x as $node) {</span></p>
+                        <p><span class="numbers">10.</span><span class="yellow">      if (stripos("{$node->nodeValue}", $q) !== false) {</span></p>
+                        <p><span class="numbers">11.</span><span class="yellow">         $result .= "{$node->nodeValue}";</span></p>
+                        <p><span class="numbers">12.</span><span class="yellow">      }</span></p>
+                        <p><span class="numbers">13.</span><span class="yellow">   }</span></p>
+                        <p><span class="numbers">14.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">15.</span><span class="yellow">   // Set $result to "No records found." if no match was found</span></p>
+                        <p><span class="numbers">16.</span><span class="yellow">   if ($result == '')</span></p>
+                        <p><span class="numbers">17.</span><span class="yellow">      $result = 'No records found.';</span></p>
+                        <p><span class="numbers">18.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">19.</span><span class="yellow">   // Show the results or "No records found."</span></p>
+                        <p><span class="numbers">20.</span><span class="yellow">   echo $result;</span></p>
+                        <p><span class="numbers">21.</span><span class="pink">?&gt</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

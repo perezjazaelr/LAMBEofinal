@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="advance()">PHP - Advanced</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP – Filtered unserialize()</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">In PHP, the built-in function unserialize() is available from PHP version 4 onwards. With PHP 7, a provision to pass a list of allowed classes has been added. This allows the untrusted source to be filtered out. The unserialze() function unserializes the data from only the trusted classes.                    </h6>
+                <h6 class="marg-bot">In PHP, serialization means generation of a storable representation of a value. This is useful for storing or passing PHP values around without losing their type and structure. The built-in serialize() function is used for this purpose.
+                    serialize(mixed $value): string
+                    The unserialze() function gives a PHP value from the serialized representation. From PHP 7 onwards, the unserialize() function follows the format below −
+                    unserialize(string $data, array $options = [ ]): mixed
+                    The $data parameter is the serialized string which you want to unserialize.
+                    The $options parameter has been newly introduced. </h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="opse-numbers">1.</span><span class="pink">&lt?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">   class MyClass { </span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">      var int $x;</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">      function __construct(int $x) {</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">         $this->x = $x;</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">      }</span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">   }</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">   class NewClass {</span></p>
+                        <p><span class="numbers">9.</span><span class="yellow">      var int $y;</span></p>
+                        <p><span class="numbers">10.</span><span class="yellow">      function __construct(int $y) {</span></p>
+                        <p><span class="numbers">11.</span><span class="yellow">         $this->y = $y;</span></p>
+                        <p><span class="numbers">12.</span><span class="yellow">      }</span></p>
+                        <p><span class="numbers">13.</span><span class="yellow">   }</span></p>
+                        <p><span class="numbers">14.</span><span class="yellow">   $obj1 = new MyClass(10);</span></p>
+                        <p><span class="numbers">15.</span><span class="yellow">   $obj2 = new NewClass(20);</span></p>
+                        <p><span class="numbers">16.</span><span class="yellow">   $sob1 = serialize($obj1);</span></p>
+                        <p><span class="numbers">17.</span><span class="yellow">   $sob2 = serialize($obj2);</span></p>
+                        <p><span class="numbers">18.</span><span class="yellow">   // default behaviour that accepts all classes</span></p>
+                        <p><span class="numbers">19.</span><span class="yellow">   // second argument can be omitted.</span></p>
+                        <p><span class="numbers">20.</span><span class="yellow">   // if allowed_classes is passed as false, unserialize converts all objects into __PHP_Incomplete_Class object</span></p>
+                        <p><span class="numbers">21.</span><span class="yellow">   $usob1 = unserialize($sob1 , ["allowed_classes" => true]);</span></p>
+                        <p><span class="numbers">22.</span><span class="yellow">   // converts all objects into __PHP_Incomplete_Class object except those of MyClass and NewClass</span></p>
+                        <p><span class="numbers">23.</span><span class="yellow">   $usob2 = unserialize($sob2 , ["allowed_classes" => ["MyClass", "NewClass"]]);</span></p>
+                        <p><span class="numbers">24.</span><span class="yellow">   echo $usob1->x . PHP_EOL;</span></p>
+                        <p><span class="numbers">25.</span><span class="yellow">   echo $usob2->y . PHP_EOL;</span></p>
+                        <p><span class="numbers">26.</span><span class="pink">&lt?php</span></p>                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="advance()">PHP-Advanced</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP – Removed Extensions & SAPIs</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">With each new version of PHP, new functionality is added and at the same time certain obsolete functionality is removed. PHP version 7 is a major version when a number of PHP extensions and SAPIs (Server-side Application Programming Interface) were removed. In the subsequent PHP 8 version also, a few more extensions have been removed.
+                    In PHP, an extension is a library or plugin, written in C/C++, and compiled into shared libraries so that can be loaded into the PHP interpreter. Once the PHP interpreter starts, the functions in the extension are available to PHP scripts.
+                    The extensions are periodically removed because they are either no longer maintained or have been replaced with more modern alternatives. Coinciding with PHP 7 for example, the ereg extension was replaced with the preg extension, and the mssql extension was replaced with the PDO_MSSQL extension.
+                    Removed Extensions
+                    The following extensions have been removed with effect from PHP 7 −
+                    • ereg extension replaced by preg
+                    • mssql extension replaced by pdo_mssql
+                    • mysql extension mysqli
+                    sybase_ct replaced by pdo_sybase
+                    The following extensions have been removed from PHP 8 onwards −
+                    • Mcrypt − The Mcrypt extension was used for encryption and decryption, but it has been deprecated since PHP 7.1 and removed in PHP 8 due to security vulnerabilities.
+                    • MDB2 − The MDB2 extension, earlier used for accessing MDB database files, is removed in PHP 8 due to lack of maintenance.
+                    • Ming − As Flash is not popular nowadays, the Ming extension, used for generating flash content, has been deprecated since PHP 5.5 and removed in PHP 8.
+                    • Phar Data − The Phar Data extension was used for accessing data within PHAR archives, but it has been removed in PHP 8 as there are other methods for accessing PHAR data.
+                    • SNMP − Because it is not being maintained, the SNMP extension has been removed in PHP 8.
+                    • Tidy − Since new libraries for HTML validation have been added, the Tidy extension was removed in PHP.
+                    • Tokenizer − The Tokenizer extension was also removed in PHP 8 for the same reason.
+                    • cURL − The cURL extension was removed in PHP 8.1, as it was no longer maintained.
+                    Removed SAPIs
+                    SAPI stands for Server-side Application Programming Interface in PHP. The SAPI is responsible for translating PHP code into something that the web server can understand. It parses the PHP code and calls the appropriate web server functions. The web server then generates an HTTP response that is sent back to the client.
+                    The following SAPIs (Server-side Application Programming Interfaces) have been removed from PHP 7 onwards −
+                    • aolserver
+                    • apache
+                    • apache_hooks
+                    • apache2filter
+                    • caudium
+                    • cgi
+                    • cgi-fcgi
+                    • fastcgi
+                    • isapi
+                    • litespeed
+                    • nsapi
+                    • pwsapi
+                    • router
+                    • thttpd
+                    • uwsgi
+                    • webserver
+                    • apache2filter
+                    • continuity
+                    • isapi
+                    • milter
+                    • nsapi
+                    • pi3web
+                    • roxen
+                    • thttpd
+                    • tux
+                    • webjames
+                    </h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <!-- paste the template code with php, ilalagay nalang yan goodsd nayan") -->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

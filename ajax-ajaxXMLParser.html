@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="ajax()">PHP AJAX</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP - AJAX XML Parser</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">Using PHP with AJAX, we can parse an XML document from a local 
+                    directory as well as on a server. The following example demonstrates how to parse 
+                    XML with a web browser.</h6>
+                <h6 class="marg-bot">The client-end script renders a HTML form and defines a JavaScript 
+                    function for sending a HTTP request to the server with XMLHttpRequest object.</h6>
+                <h6 class="marg-bot">On the server, a PHP script loads the DOM object from the required 
+                    XML document, fetches the selected course from the $_REQUEST variable, and renders 
+                    the details of the course chosen as the response back to the client.</h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">   $q = $_GET["q"];</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">   $xmlDoc = new DOMDocument();</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">   $xmlDoc->load("test.xml");</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">   $x = $xmlDoc->getElementsByTagName('COURSE');</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">9.</span><span class="yellow">   for ($i = 0; $i&lt;=$x->length-1; $i++) {</span></p>
+                        <p><span class="numbers">10.</span><span class="yellow">      if ($x->item($i)->nodeType == 1) {</span></p>
+                        <p><span class="numbers">11.</span><span class="yellow">         if ($x->item($i)->childNodes->item(0)->nodeValue == $q) {</span></p>
+                        <p><span class="numbers">12.</span><span class="yellow">            $y = ($x->item($i)->parentNode);</span></p>
+                        <p><span class="numbers">13.</span><span class="yellow">         }</span></p>
+                        <p><span class="numbers">14.</span><span class="yellow">      }</span></p>
+                        <p><span class="numbers">15.</span><span class="yellow">   }</span></p>
+                        <p><span class="numbers">16.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">17.</span><span class="yellow">   $cd = ($y->childNodes);</span></p>
+                        <p><span class="numbers">18.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">19.</span><span class="yellow">   for ($i = 0;$i<$cd->length;$i++) {</span></p>
+                        <p><span class="numbers">20.</span><span class="yellow">      if ($cd->item($i)->nodeType == 1) {</span></p>
+                        <p><span class="numbers">21.</span><span class="yellow">         echo("&ltb&gt" . $cd->item($i)->nodeName . ":</b> ");</span></p>
+                        <p><span class="numbers">22.</span><span class="yellow">         echo($cd->item($i)->childNodes->item(0)->nodeValue);</span></p>
+                        <p><span class="numbers">23.</span><span class="yellow">         echo("&ltbr&gt");</span></p>
+                        <p><span class="numbers">24.</span><span class="yellow">      }</span></p>
+                        <p><span class="numbers">25.</span><span class="yellow">   }</span></p>
+                        <p><span class="numbers">26.</span><span class="pink">?&gt</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>
