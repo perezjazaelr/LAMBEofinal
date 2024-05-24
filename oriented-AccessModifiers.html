@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .list, .format{
+           padding: 40px;
+           color: black;
+           background: linear-gradient(77deg, rgba(179,136,255,1) 0%, rgba(255,255,255,1) 100%);
+           border-radius: 20px;
+       }
+       .format{
+           padding:20px;
+           text-align: center;
+       }
+       .filename{
+           color: yellow;
+       }
+   </style>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="objectOriented()">Object Oriented PHP</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP - Access Modifiers</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">In PHP, the keywords public, private and protected are known as the access modifiers. These keywords control the extent of accessibility or visibility of the class properties and methods. One of these keywords is prefixed while declaring the member variables and defining member functions.</h6>
+                <h6 class="marg-bot">Whether the PHP code has free access to a class member, or it is restricted from getting access, or it has a conditional access, is determined by these keywords</h6>
+                <h6 class="marg-bot">
+                    <div class = "list">
+                        <ul>
+                            <li><b>file_exists()</b> − tests if the file exists</li>
+                            <li><b>is_file()</b> if the handle returned by the fopen() refers to a file or directory.</li>
+                            <li><b>is_readable()</b> − test if the file you have opened allows reading data</li>
+                            <li><b>is_writable()</b> − test if writing data in the file is allowed</li>
+                        </ul>
+                    </div>
+                </h6>
+                <h6 class="marg-bot">The principle of data encapsulation is the cornerstone of the object-oriented programming methodology. It refers to the mechanism of keeping the data members or properties of an object away from the reach of the environment outside the class, allowing controlled access only through the methods or functions available in the class.</h6>
+                <h6 class="marg-bot">To implement encapsulation, data members of a class are made private and the methods are made public.</h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="opse-numbers">1.</span><span class="pink">&lt?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">class Fruit {</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">  public $name;</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">  public $color;</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">  public $weight;</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">  function set_name($n) {  // a public function (default)</span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">    $this->name = $n;</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">  }</span></p>
+                        <p><span class="numbers">9.</span><span class="yellow">  protected function set_color($n) { // a protected function</span></p>
+                        <p><span class="numbers">10.</span><span class="yellow">    $this->color = $n;</span></p>
+                        <p><span class="numbers">11.</span><span class="yellow">  }</span></p>
+                        <p><span class="numbers">12.</span><span class="yellow">  private function set_weight($n) { // a private function</span></p>
+                        <p><span class="numbers">13.</span><span class="yellow">    $this->weight = $n;</span></p>
+                        <p><span class="numbers">14.</span><span class="yellow">  }</span></p>
+                        <p><span class="numbers">15.</span><span class="yellow">}</span></p>
+                        <p><span class="numbers">16.</span><span class="yellow">$mango = new Fruit();</span></p>
+                        <p><span class="numbers">17.</span><span class="yellow">$mango->set_name('Mango'); // OK</span></p>
+                        <p><span class="numbers">18.</span><span class="yellow">$mango->set_color('Yellow'); // ERROR</span></p>
+                        <p><span class="numbers">19.</span><span class="yellow">$mango->set_weight('300'); // ERROR</span></p>
+                        <p><span class="numbers">20.</span><span class="pink">&lt?php</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

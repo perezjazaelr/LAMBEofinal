@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="login()">PHP Login Example</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP - My SQL Login</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">MySQL is a popular choice as a backend database for PHP powered web applications. 
+                    In this chapter, we shall learn to develop a login page for a PHP application that authenticates the given 
+                    username and password.
+                </h6>
+                <h6 class="marg-bot">You should have a web server having PHP and MySQL installed for experimenting with the example
+                     discussed in this chapter. The bundled binaries of Apache, PHP and MySQL (MariaDB) in the form of XAMPP for your 
+                     operating system can be easily installed.</h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <!-- paste the template code with php, ilalagay nalang yan goodsd nayan") -->
+                        
+
+                        <p><span class="numbers"></span><span class="pink">File.mydb</span></p>
+<p><span class="numbers">1.</span><span class="pink">use mydb;</span></p>
+<p><span class="numbers">2.</span><span class="yellow"></span></p>
+<p><span class="numbers">3.</span><span class="yellow">CREATE TABLE `admin` (</span></p>
+<p><span class="numbers">4.</span><span class="yellow">   `username` varchar(10) NOT NULL,</span></p>
+<p><span class="numbers">5.</span><span class="yellow">   `passcode` varchar(10) NOT NULL</span></p>
+<p><span class="numbers">6.</span><span class="yellow">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;</span></p>
+<p><span class="numbers">7.</span><span class="yellow"></span></p>
+<p><span class="numbers">8.</span><span class="yellow">INSERT INTO `admin` (`username`, `passcode`) VALUES</span></p>
+<p><span class="numbers">9.</span><span class="yellow">('guest', 'abc123'),</span></p>
+<p><span class="numbers">10.</span><span class="yellow">('manager', 'secret'),</span></p>
+<p><span class="numbers">11.</span><span class="yellow">('user', 'test');</span></p>
+<p><span class="numbers">12.</span><span class="yellow"></span></p>
+<p><span class="numbers">13.</span><span class="yellow">ALTER TABLE `admin`</span></p>
+<p><span class="numbers">14.</span><span class="yellow">   ADD PRIMARY KEY (`username`);</span></p>
+<p><span class="numbers">15.</span><span class="pink">COMMIT;</span></p>
+<hr>
+<p><span class="numbers"></span><span class="pink">Config.php</span></p>
+<p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+<p><span class="numbers">2.</span><span class="yellow">   define('DB_SERVER', 'localhost');</span></p>
+<p><span class="numbers">3.</span><span class="yellow">   define('DB_USERNAME', 'root');</span></p>
+<p><span class="numbers">4.</span><span class="yellow">   define('DB_PASSWORD', '');</span></p>
+<p><span class="numbers">5.</span><span class="yellow">   define('DB_DATABASE', 'mydb');</span></p>
+<p><span class="numbers">6.</span><span class="yellow">   $db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);</span></p>
+<p><span class="numbers">7.</span><span class="pink">?&gt;</span></p>
+<hr>
+<p><span class="numbers"></span><span class="pink">Login.php</span></p>
+<p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+<p><span class="numbers">2.</span><span class="yellow">   include("config.php");</span></p>
+<p><span class="numbers">3.</span><span class="yellow">   session_start();</span></p>
+<p><span class="numbers">4.</span><span class="yellow">   $error='';</span></p>
+<p><span class="numbers">5.</span><span class="yellow">   if($_SERVER["REQUEST_METHOD"] == "POST") { </span></p>
+<p><span class="numbers">6.</span><span class="yellow">      // username and password sent from form </span></p>
+<p><span class="numbers">7.</span><span class="yellow">      $myusername = mysqli_real_escape_string($db,$_POST['username']);</span></p>
+<p><span class="numbers">8.</span><span class="yellow">      $mypassword = mysqli_real_escape_string($db,$_POST['password']);</span></p>
+<p><span class="numbers">9.</span><span class="yellow">      $sql = "SELECT * FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";</span></p>
+<p><span class="numbers">10.</span><span class="yellow">      $result = mysqli_query($db,$sql);</span></p>
+<p><span class="numbers">11.</span><span class="yellow">      $row = mysqli_num_rows($result);</span></p>
+<p><span class="numbers">12.</span><span class="yellow">      $count = mysqli_num_rows($result);</span></p>
+<p><span class="numbers">13.</span><span class="yellow">      if($count == 1) {</span></p>
+<p><span class="numbers">14.</span><span class="yellow">         // session_register("myusername");</span></p>
+<p><span class="numbers">15.</span><span class="yellow">         $_SESSION['login_user'] = $myusername;</span></p>
+<p><span class="numbers">16.</span><span class="yellow">         header("location: welcome.php");</span></p>
+<p><span class="numbers">17.</span><span class="yellow">      } else {</span></p>
+<p><span class="numbers">18.</span><span class="yellow">         $error = "Your Login Name or Password is invalid";</span></p>
+<p><span class="numbers">19.</span><span class="yellow">      }</span></p>
+<p><span class="numbers">20.</span><span class="pink">   }</span></p>
+<p><span class="numbers">21.</span><span class="pink">?&gt;</span></p>
+<p><span class="numbers">22.</span><span class="pink">&lt;html&gt;</span></p>
+<p><span class="numbers">23.</span><span class="pink">&lt;head&gt;</span></p>
+<p><span class="numbers">24.</span><span class="yellow">   &lt;title&gt;Login Page&lt;/title&gt;</span></p>
+<p><span class="numbers">25.</span><span class="yellow">   &lt;style type = "text/css"&gt;</span></p>
+<p><span class="numbers">26.</span><span class="yellow">      body {</span></p>
+<p><span class="numbers">27.</span><span class="yellow">         font-family:Arial, Helvetica, sans-serif;</span></p>
+<p><span class="numbers">28.</span><span class="yellow">         font-size:14px;</span></p>
+<p><span class="numbers">29.</span><span class="yellow">      }</span></p>
+<p><span class="numbers">30.</span><span class="yellow">      label {</span></p>
+<p><span class="numbers">31.</span><span class="yellow">         font-weight:bold;</span></p>
+<p><span class="numbers">32.</span><span class="yellow">         width:100px;</span></p>
+<p><span class="numbers">33.</span><span class="yellow">         font-size:14px;</span></p>
+<p><span class="numbers">34.</span><span class="yellow">      }</span></p>
+<p><span class="numbers">35.</span><span class="yellow">      .box {</span></p>
+<p><span class="numbers">36.</span><span class="yellow">         border:#666666 solid 1px;</span></p>
+<p><span class="numbers">37.</span><span class="yellow">      }</span></p>
+<p><span class="numbers">38.</span><span class="yellow">   &lt;/style&gt;</span></p>
+<p><span class="numbers">39.</span><span class="pink">&lt;/head&gt;</span></p>
+<p><span class="numbers">40.</span><span class="pink">&lt;body bgcolor = "#FFFFFF"&gt;</span></p>
+<p><span class="numbers">41.</span><span class="pink">   &lt;div align = "center"&gt;</span></p>
+<p><span class="numbers">42.</span><span class="yellow">      &lt;div style = "width:300px; border: solid 1px #333333; " align = "left"&gt;</span></p>
+<p><span class="numbers">43.</span><span class="yellow">         &lt;div style = "background-color:#333333; color:#FFFFFF; padding:3px;"&gt;&lt;b&gt;Login&lt;/b&gt;&lt;/div&gt;</span></p>
+<p><span class="numbers">44.</span><span class="yellow">         &lt;div style = "margin:30px"&gt;</span></p>
+<p><span class="numbers">45.</span><span class="yellow">            &lt;form action = "" method = "post"&gt;</span></p>
+<p><span class="numbers">46.</span><span class="yellow">               &lt;label&gt;UserName  :&lt;/label&gt;&lt;input type = "text" name = "username" class = "box"/&gt;&lt;br /&gt;&lt;br /&gt;</span></p>
+<p><span class="numbers">47.</span><span class="yellow">               &lt;label&gt;Password  :&lt;/label&gt;&lt;input type = "password" name = "password" class = "box" /&gt;&lt;br/&gt;&lt;br /&gt;</span></p>
+<p><span class="numbers">48.</span><span class="yellow">               &lt;input type = "submit" value = " Submit "/&gt;&lt;br /&gt;</span></p>
+<p><span class="numbers">49.</span><span class="yellow">            &lt;/form&gt;</span></p>
+<p><span class="numbers">50.</span><span class="yellow">            &lt;div style = "font-size:11px; color:#cc0000; margin-top:10px"&gt;&lt;?php echo $error; ?&gt;&lt;/div&gt;</span></p>
+<p><span class="numbers">51.</span><span class="yellow">         &lt;/div&gt;</span></p>
+<p><span class="numbers">52.</span><span class="yellow">      &lt;/div&gt;</span></p>
+<p><span class="numbers">53.</span><span class="pink">   &lt;/div&gt;</span></p>
+<p><span class="numbers">54.</span><span class="pink">&lt;/body&gt;</span></p>
+<p><span class="numbers">55.</span><span class="pink">&lt;/html&gt;</span></p>
+<hr>
+<p><span class="numbers"></span><span class="pink">Welcome.php</span></p>
+<p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+<p><span class="numbers">2.</span><span class="yellow">   include('session.php');</span></p>
+<p><span class="numbers">3.</span><span class="pink">?&gt;</span></p>
+<p><span class="numbers">4.</span><span class="pink">&lt;html&gt;</span></p>
+<p><span class="numbers">5.</span><span class="pink">&lt;head&gt;</span></p>
+<p><span class="numbers">6.</span><span class="yellow">   &lt;title&gt;Welcome &lt;/title&gt;</span></p>
+<p><span class="numbers">7.</span><span class="pink">&lt;/head&gt;</span></p>
+<p><span class="numbers">8.</span><span class="pink">&lt;body&gt;</span></p>
+<p><span class="numbers">9.</span><span class="yellow">   &lt;h1&gt;Welcome &lt;?php echo $login_session; ?&gt;&lt;/h1&gt;</span></p>
+<p><span class="numbers">10.</span><span class="yellow">   &lt;h2&gt;&lt;a href = "logout.php"&gt;Sign Out&lt;/a&gt;&lt;/h2&gt;</span></p>
+<p><span class="numbers">11.</span><span class="pink">&lt;/body&gt;</span></p>
+<p><span class="numbers">12.</span><span class="pink">&lt;/html&gt;</span></p>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>
