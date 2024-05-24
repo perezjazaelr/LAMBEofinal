@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        .list, .format{
+            padding: 40px;
+            color: black;
+            background: linear-gradient(77deg, rgba(179,136,255,1) 0%, rgba(255,255,255,1) 100%);
+            border-radius: 20px;
+        }
+
+        .format{
+            text-align: center;
+        }
+
+        .filename{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <h3 onclick="superGlobal()">PHP Superglobals</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <h2>PHP - $_COOKIE</h2>
+            </div>
+            <div class="description">
+                <h6>
+                    The PHP superglobal $_COOKIE stores the variables passed to the current PHP script along with the HTTP request in the form of cookies. $HTTP_COOKIE_VARS also contains the same information, but it is not a superglobal, and it has now been deprecated
+                    <br>
+                    <br>
+                    Cookies are text files stored by a server on the client computer and they are kept for tracking purpose. PHP transparently supports HTTP cookies. Cookies are usually set in an HTTP header. JavaScript can also sets a cookie directly on a browser.
+                    <br>
+                    <br>
+                    The server script sends a set of cookies to the browser. It stores this information on the local machine for future use. Next time, when the browser sends any request to the web server, it sends those cookies information to the server and the server uses that information to identify the user.
+                    <br>
+                    <br>
+                    <b style = "font-size: 30px;">The setcookie() Function</b>
+                    <br>
+                    <br>
+                    PHP provides the setcookie function to create a cookie object to be sent to the client along with the HTTP response.
+                    <br>
+                    <br>
+                    <div class = "format">
+                        <p><span>setcookie(name, value, expire, path, domain, security);</span></p>
+                    </div>
+                    <br>
+                    <br>
+                    <b style = "font-size: 20px;">Parameters:</b>
+                    <br>
+                    <br>
+                    <div class = "list">
+                        <ul>
+                            <li><b>Name</b> − Name of the cookie stored.</li>
+                            <li><b>Value</b> − This sets the value of the named variable.</li>
+                            <li><b>Expiry</b> − This specifes a future time in seconds since 00:00:00 GMT on 1st Jan 1970.</li>
+                            <li><b>Path</b> − Directories for which the cookie is valid.</li>
+                            <li><b>Domain</b> − Specifies the domain name in very large domains.</li>
+                            <li><b>Security</b> − 1 for HTTPS. Default 0 for regular HTTP.</li>
+                        </ul>
+                    </div>
+                </h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;html&gt;</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">&lt;body&gt;</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">&lt;form action="hello.php" method="post"&gt;</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">&lt;p&gt;First Name: &lt;input type="text" name="first_name"/&gt; &lt;/p&gt;</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">&lt;p&gt;Last Name: &lt;input type="text" name="last_name" /&gt; &lt;/p&gt;</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">&lt;input type="submit" value="Submit" /&gt;</span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">&lt;/form&gt;</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">&lt;/body&gt;</span></p>
+                        <p><span class="numbers">9.</span><span class="pink">&lt;/html&gt;</span></p>                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

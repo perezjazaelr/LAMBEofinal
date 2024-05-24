@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+
+        .list, .format{
+            padding: 40px;
+            color: black;
+            background: linear-gradient(77deg, rgba(179,136,255,1) 0%, rgba(255,255,255,1) 100%);
+            border-radius: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+          text-align: center;
+        }
+        th{
+            background: #248f0b;
+        }
+        .filename{
+            color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <h3 onclick="superGlobal()">PHP Superglobals</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <h2>PHP - $_ENV </h2>
+            </div>
+            <div class="description">
+                <h6>
+                    $_ENV is a superglobal variable in PHP. It is an associative array that stores all the environment variables available in the current script. $HTTP_ENV_VARS also contains the same information, but it is not a superglobal, and it has now been deprecated.
+                    <br>
+                    <br>
+                    The environment variables are imported into the global namespace. Most of these variables are provided by the shell under which the PHP parser is running. Hence, the list of environment variables may be different on different platforms.
+                    <br>
+                    <br>
+                    This array ($_ENV) also includes CGI variables in case PHP is running as a server module or a CGI processor.
+                    <br>
+                    <br>
+                    We can use the foreach loop to display all the environment variables available −
+                    <br>
+                    <br>
+                    <div class = "format">
+                        <p><span>
+                            &lt;?php <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach ($_ENV as $k=&gt;$v) <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo $k . " =&gt; " . $v . "&lt;br&gt;; <br>
+                            ?&gt; <br>
+                        </span></p>                        
+                    </div>
+                    <br>
+                    <br>
+                    On a Windows OS and with XAMPP server, you may get the list of environment variables as follows −
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>VARIABLE</th>
+                                <th>VALUE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    ALLUSERSPROFILE
+                                </td>
+                                <td>C:\ProgramData</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    APPDATA
+                                </td>
+                                <td>C:\Users\user\AppData\Roaming</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    CommonProgramFiles
+                                </td>
+                                <td>C:\Program Files\Common Files</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    CommonProgramFiles(x86)
+                                </td>
+                                <td>C:\Program Files (x86)\Common Files</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    CommonProgramW6432
+                                </td>
+                                <td>C:\Program Files\Common Files</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    COMPUTERNAME
+                                </td>
+                                <td>GNVBGL3</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ComSpec
+                                </td>
+                                <td>C:\WINDOWS\system32\cmd.exe</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    DriverData
+                                </td>
+                                <td>C:\Windows\System32\Drivers\DriverData</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    HOMEDRIVE
+                                </td>
+                                <td>C −</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    HOMEPATH
+                                </td>
+                                <td>\Users\user</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    LOCALAPPDATA
+                                </td>
+                                <td>C:\Users\user\AppData\Local</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    LOGONSERVER
+                                </td>
+                                <td>\\GNVBGL3</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    MOZ_PLUGIN_PATH
+                                </td>
+                                <td>C:\Program Files (x86)\ Foxit Software\ Foxit PDF Reader\plugins\</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    OneDrive
+                                </td>
+                                <td>C:\Users\user\OneDrive</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    OneDriveConsumer
+                                </td>
+                                <td>C:\Users\user\OneDrive</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    OS
+                                </td>
+                                <td>Windows_NT</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Path
+                                </td>
+                                <td>C:\Python311\Scripts\;
+
+                                    C:\Python311\;
+                                    
+                                    C:\WINDOWS\system32;
+                                    
+                                    C:\WINDOWS;
+                                    
+                                    C:\WINDOWS\System32\Wbem;
+                                    
+                                    C:\WINDOWS\System32\WindowsPowerShell\ v1.0\;
+                                    
+                                    C:\WINDOWS\System32\OpenSSH\;
+                                    
+                                    C:\xampp\php;
+                                    
+                                    C:\Users\user\AppData\Local\Microsoft\ WindowsApps;
+                                    
+                                    C:\VSCode\Microsoft VS Code\bin</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    PATHEXT
+                                </td>
+                                <td>.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE; .WSF;.WSH;.MSC;.PY;.PYW</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    PROCESSOR_ARCHITECTURE
+                                </td>
+                                <td>AMD64</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    PROCESSOR_IDENTIFIER
+                                </td>
+                                <td>Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    PROCESSOR_LEVEL
+                                </td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    PROCESSOR_REVISION
+                                </td>
+                                <td>8c01</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ProgramData
+                                </td>
+                                <td>C:\ProgramData
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ProgramFiles
+                                </td>
+                                <td>C:\Program Files</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">   echo "Path: " . $_ENV['Path'];</span></p>
+                        <p><span class="numbers">3.</span><span class="pink"> ?&gt;</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                        <span class = "filename"> getenv.php </span>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">  $arr=getenv();</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">  foreach ($arr as $key=>$val)</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">  echo "$key=>$val";</span></p>
+                        <p><span class="numbers">5.</span><span class="pink"> ?&gt;</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                        <span class = "filename"> putenv.php </span>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">  putenv("PHP_TEMPUSER=GUEST");</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">  echo "Temp user: " . getenv("PHP_TEMPUSER");</span></p>
+                        <p><span class="numbers">4.</span><span class="pink"> ?&gt;</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

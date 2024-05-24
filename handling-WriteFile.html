@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .list, .format{
+           padding: 40px;
+           color: black;
+           background: linear-gradient(77deg, rgba(179,136,255,1) 0%, rgba(255,255,255,1) 100%);
+           border-radius: 20px;
+       }
+       .format{
+           padding:20px;
+           text-align: center;
+       }
+       .filename{
+           color: yellow;
+       }
+   </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="fileHandling()">PHP File Handling</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP - Write File</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">PHP’s built-in function library provides two functions to perform write operations on a file stream. These functions are <b>fwrite() and fputs().</b></h6>
+                <h6 class="marg-bot">To be able to write data in a file, it must be opened in write mode (w), append mode (a), read/write mode (r+ or w+) or binary write/append mode (rb+, wb+ or wa).</h6>
+                <br>
+                <br>
+                <h6>
+                    <b style = "font-size: 30px;">The fputs() Function</b>
+                    <br>
+                    <br>
+                    The fputs() function writes a string into the file opened in a writable mode.
+                    Here, the $stream parameter is a handle to a file opened in a writable mode. The $string parameter is the data to be written, and $length is an optional parameter that specifies the maximum number of bytes to be written.
+                    The fputs() function returns the number of bytes written, or false if the function is unsuccessful.
+                    <br>
+                    <br>
+                    <div class = "format">
+                        <p><span>fputs(resource $stream, string $string, int $length)</span></p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <b style = "font-size: 30px;">The fwrite() Function</b>
+                    <br>
+                    <br>
+                    The frwrite() function is a counterpart of fread() function. It performs binary-safe write operations.
+                    Here, the $stream parameter is a resource pointing to the file opened in a writable mode. Data to be written to the file is provided in the $data parameter. The optional $length parameter may be provided to specify the number of bytes to be written. It should be int, writing will stop after length bytes have been written or the end of data is reached, whichever comes first.
+                    <br>
+                    <br>
+                    <div class = "format">
+                        <p><span>fwrite(resource $stream, string $data, ?int $length = null): int|false</span></p>
+                    </div>
+                </h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                        <span class = "filename"> fputs.php </span>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">$file = fopen("hello.txt", "r");</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">$newfile = fopen("new.txt", "w");</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">while(!feof($file)) {</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">$str = fgets($file);</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">fputs($newfile, $str);</span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">}</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">fclose($file);</span></p>
+                        <p><span class="numbers">9.</span><span class="yellow">fclose($newfile);</span></p>
+                        <p><span class="numbers">10.</span><span class="pink">?&gt;</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                        <span class = "filename"> fgets.php </span>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">$name = "welcome.png";</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">$file = fopen($name, "rb");</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">$newfile = fopen("new.png", "wb");</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">$size = filesize($name);</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">$data = fread($file, $size);</span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">fwrite($newfile, $data, $size);</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">fclose($file);</span></p>
+                        <p><span class="numbers">9.</span><span class="yellow">fclose($newfile);</span></p>
+                        <p><span class="numbers">7.</span><span class="pink">?&gt;</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+          text-align: center;
+        }
+        th{
+            background: #248f0b;
+        }
+        .list{
+            padding: 40px;
+            color: black;
+            background: linear-gradient(77deg, rgba(179,136,255,1) 0%, rgba(255,255,255,1) 100%);
+            border-radius: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <h3 onclick="superGlobal()">PHP Superglobals</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <h2>PHP - $_SERVER </h2>
+            </div>
+            <div class="description">
+                <h6>
+                    $_SERVER is a superglobal in PHP. It holds information regarding HTTP headers, path and script location, etc.
+                    <br>
+                    <br>
+                    <br>
+                    <div class = "list">
+                        <ul>
+                            <li>$_SERVER is an associative array and it holds all the server and execution environment related information.</li>
+                            <li>Most of the entries in this associative array are populated by the web server. The entries may change from one web server to other, as servers may omit some, or provide others.</li>
+                            <li>For a PHP script running on the command line, most of these entries will not be available or have any meaning</li>
+                            <li>PHP will also create additional elements with values from request headers. These entries will be named "HTTP_" followed by the header name, capitalized and with underscores instead of hyphens.</li>
+                            <li>For example, the "Accept-Language" header would be available as $_SERVER['HTTP_ACCEPT_LANGUAGE'].</li>
+                            <li>PHP versions prior to 5.4.0 had $HTTP_SERVER_VARS which contained the same information but it has now been removed.</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sr. Number</th>
+                                <th>Server Variables & Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td><b>PHP_SELF</b> <br>
+                                    Stores filename of currently executing script.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2
+                                </td>
+                                <td><b>SERVER_ADDR</b> <br>
+                                    This property of array returns the IP address of the server under which the current script is executing.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    3
+                                </td>
+                                <td><b>SERVER_NAME</b> <br>
+                                    Name of server host under which the current script is executing. In case of a server running locally, localhost is returned.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    4
+                                </td>
+                                <td><b>QUERY_STRING</b> <br>
+                                    A query string is the string of key value pairs separated by the "&" symbol and appended to the URL after the "?" symbol.
+                                    For example, http://localhost/testscript?name=xyz&age=20 URL returns trailing query string</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    5
+                                </td>
+                                <td><b>REQUEST_METHOD</b> <br>
+                                    HTTP request method used for accessing a URL, such as POST, GET, POST, PUT or DELETE.
+                                    In the above query string example, a URL attached to query string with the "?" symbol requests the page with GET method</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    6
+                                </td>
+                                <td><b>DOCUMENT_ROOT</b> <br>
+                                    Returns the name of the directory on the server that is configured as the document root. On XAMPP apache server, it returns htdocs as the name of document root c:/xampp/htdocs</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    7
+                                </td>
+                                <td><b>REMOTE_ADDR</b> <br>
+                                    IP address of the machine from where the user is viewing the current page.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    8
+                                </td>
+                                <td><b>SERVER_PORT</b> <br>
+                                    Port number on which the web server is listening to the incoming request. Default is 80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">   foreach ($_SERVER as $k=>$v)</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">      echo $k . "=>" . $v . "\n";</span></p>
+                        <p><span class="numbers">4.</span><span class="pink"> ?&gt;</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

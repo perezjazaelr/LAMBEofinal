@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="fileHandling()">PHP File Handling</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP - Download File</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">Most modern browsers allow files of certain types to be downloaded automatically, without any server-side code such as a PHP script. For example, a zip file, or an EXE file.
+                    If an HTML hyperlink points to a ZIP or EXE file, the browser downloads it and pops up a save dialog. However, text files, image files, etc., are not downloaded but opened in the browser, which you can save to your local filesystem.
+                    </h6>
+                <h6 class="marg-bot">The readfile() Function</h6>
+                <h6 class="marg-bot">To download such files (instead of the browser automatically opening them), we can use the readfile() function in PHP’s built-in function library.
+                </h6>
+                
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <!-- paste the template code with php, ilalagay nalang yan goodsd nayan") -->
+                        <p><span class="opse-numbers">1.</span><span class="pink">&lt?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">$filePath = 'welcome.png';</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">// Set the Content-Type header to application/octet-stream</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">header('Content-Type: application/octet-stream');</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">// Set the Content-Disposition header to the filename of the downloaded file</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">header('Content-Disposition: attachment; filename="'. basename($filePath).'"');</span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">// Read the contents of the file and output it to the browser.</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">readfile($filePath);</span></p>
+                        <p><span class="numbers">9.</span><span class="pink">&lt?php</span></p>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>

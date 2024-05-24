@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+         .list, .format{
+            padding: 40px;
+            color: black;
+            background: linear-gradient(77deg, rgba(179,136,255,1) 0%, rgba(255,255,255,1) 100%);
+            border-radius: 20px;
+        }
+        .format{
+            padding:20px;
+            text-align: center;
+        }
+        .filename{
+            color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="fileHandling()">PHP File Handling</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP - Read File</h2>
+            </div>
+            
+            <div class="description">
+                <h6 class="marg-bot">There are a number of options in PHP for reading data from a file that has been opened with the fopen()</h6>
+                <h6 class="marg-bot">function. The following built-in functions in PHP’s library can help us perform the read operation −</h6>
+                <h6 class="marg-bot"><!-- paste description in docs --></h6>
+                <h6>
+                <div class = "list">
+                    <ul>
+                        <li><b>fgets()</b> − gets a line from the file pointer.</li>
+                        <li><b>fgetc()</b> − returns a string with a single character from the file pointer.</li>
+                        <li><b>fread()</b> − reads a specified number of bytes from the file pointer.</li>
+                        <li><b>fscanf()</b> − reads data from the file and parses it as per the specified format.</li>
+                    </ul>
+                </div>
+                <br>
+                <br>
+                <b style = "font-size: 30px;">The fgets() Function</b>
+                <br>
+                <br>
+                The <b>fgets()</b> function can return a line from an open file. This function stops returning on a new line at a specified length or EOF, whichever comes first and returns <b>false</b> on failure.
+                <br>
+                <br>
+                <div class = "format">
+                    <p><span>fgets(resource $stream, ?int $length = null): string|false</span></p>
+                </div>
+                <br>
+                <br>
+                <b style = "font-size: 30px;">The fgetc() Function</b>
+                <br>
+                <br>
+                The fgetc() function returns a single character read from the current position of the file handle. It returns <b>false</b> when EOF is encountered.
+                <br>
+                <br>
+                <div class = "format">
+                    <p><span>fgetc(resource $stream): string|false</span></p>
+                </div>
+                <br>
+                <br>
+                <b style = "font-size: 30px;">The fread() Function</b>
+                <br>
+                <br>
+                The fread() function in PHP is a binary-safe function for reading data from a file. While the fgets() function reads only from a text file, the fread() function can read a file in binary mode.
+                <br>
+                <br>
+                <div class = "format">
+                    <p><span>fread(resource $stream, int $length): string|false</span></p>
+                </div>
+                <br>
+                <br>
+                <b style = "font-size: 30px;">The fscanf() Function</b>
+                <br>
+                <br>
+                The fscanf() function in PHP reads the input from a file stream and parses it according to the specified format, thereby converts it into the variables of respective types. Each call to the function reads one line from the file.
+                <br>
+                <br>
+                <div class = "format">
+                    <p><span>fread(resource $stream, int $length): string|false</span></p>
+                </div>
+                <br>
+                <br>
+                <div class = "list">
+                    <ul>
+                        <li><b>%% </b> − Returns a percent</li>
+                        <li><b>%b</b> − Binary number</li>
+                        <li><b>%c</b> − The character according to the ASCII value</li>
+                        <li><b>%f</b> − Floating-point number</li>
+                        <li><b>%F</b> − Floating-point number</li>
+                        <li><b>%o</b> − Octal Number</li>
+                        <li><b>%s</b> − String</li>
+                        <li><b>%d</b> − Signed decimal number</li>
+                        <li><b>%e</b> − Scientific notation</li>
+                        <li><b>%u</b> − Unsigned decimal number</li>
+                        <li><b>%x</b> − Hexadecimal number for lowercase letters</li>
+                        <li><b>%X</b> − Hexadecimal number for uppercase letters</li>
+                    </ul>
+                </div>
+                </h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                        <span class = "filename"> fgets.php </span>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">$file = fopen("hello.txt", "r");</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">while(!feof($file)) {</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">echo fgets($file) . "&lt;br&gt;";</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">}</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">fclose($file);</span></p>
+                        <p><span class="numbers">7.</span><span class="pink">?&gt;</span></p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                        <span class = "filename"> fgetc.php </span>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">$file = fopen("hello.txt", "r");</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">while(!feof($file)) {</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">$char = fgetc($file);</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">if ($char == "\n")</span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">echo "&lt;br&gt;";</span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">echo $char;</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">}</span></p>
+                        <p><span class="numbers">9.</span><span class="yellow">fclose($file);</span></p>
+                        <p><span class="numbers">10.</span><span class="pink">?&gt;</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                        <span class = "filename">fread.php</span>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">$name = "welcome.png";</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">$file = fopen($name, "rb");</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">$data = fread($file, filesize($name));</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">var_dump($data);</span></p>
+                        <p><span class="numbers">6.</span><span class="pink">?&gt;</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                        <span class ="filename">fscanf.php</span>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt;?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">$fp = fopen("employees.txt", "r");</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow">while ($employee_info = fscanf($fp, "%s\t%s\t%s\t%d\n")) {</span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">list ($name, $email, $post, $salary) = $employee_info;</span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">echo "&lt;b&gt;Name&lt;/b&gt;: $name &lt;b&gt;Email&lt;/b&gt;: $email &lt;b&gt;Salary&lt;/b&gt;: Rs. $salary &lt;br&gt;";</span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">}</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">fclose($fp);</span></p>
+                        <p><span class="numbers">9.</span><span class="pink">?&gt;</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>
