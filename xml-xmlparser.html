@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <!-- PAPALITAN YUNG ASSIGNED TOPIC -->
+            <h3 onclick="xml()">PHP XML</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="header">
+                <!-- YUNG SAMPLE PALITAN KUNG ANONG SUBTOPC -->
+                <h2>PHP - Simple XML Parser</h2>
+            </div>
+            
+            <div class="description">
+                <!-- DESCRIPTION (each line nung "h6" new line yan!") -->
+                <h6 class="marg-bot">The SimpleXML extension of PHP provides a very simple 
+                    and easy to use toolset to convert XML to an object that can be processed 
+                    with normal property selectors and array iterators. It is a tree_based 
+                    parser, and works well with simple XML files, but may face issues when 
+                    working with larger and complex XML documents.</h6>
+            </div>
+            <div class="sub-header">
+                <div class="line"></div>
+                <h4>SYNTAX</h4>
+                <div class="line"></div>
+            </div>
+            <div class="syntax">
+                <div class="syntax-container">
+                    <div class="ios">
+                        <div class="circle-ios ios1"></div>
+                        <div class="circle-ios ios2" ></div>
+                        <div class="circle-ios ios3"></div>
+                    </div>
+                    <div class="sub-context dark-syntax">
+                        <p><span class="numbers">1.</span><span class="pink">&lt?php</span></p>
+                        <p><span class="numbers">2.</span><span class="yellow">   $xml = simplexml_load_file("books.xml") or die("Error: Cannot create object");</span></p>
+                        <p><span class="numbers">3.</span><span class="yellow"></span></p>
+                        <p><span class="numbers">4.</span><span class="yellow">   foreach($xml->children() as $books) { </span></p>
+                        <p><span class="numbers">5.</span><span class="yellow">      echo $books->title . "&ltbr&gt; "; </span></p>
+                        <p><span class="numbers">6.</span><span class="yellow">      echo $books->tutor . "&ltbr&gt; "; </span></p>
+                        <p><span class="numbers">7.</span><span class="yellow">      echo $books->duration . "&ltbr&gt; ";</span></p>
+                        <p><span class="numbers">8.</span><span class="yellow">      echo $books->price . "&lthr&gt; "; </span></p>
+                        <p><span class="numbers">9.</span><span class="yellow">   }</span></p>
+                        <p><span class="numbers">10.</span><span class="pink">?&gt</span></p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="sub-footer">
+                <div class="left-footer box-footer">
+                    <div class="one foot">
+                        <i class="fa-solid fa-house"></i>
+                        <h3 onclick="home()">HOME</h3>
+                    </div>
+                    <div class="two foot">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>091122334455</h3>
+                    </div>
+                    <div class="three">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+                <div class="right-footer box-footer">
+                    <h3>ABOUT</h3>
+                    <h3>"Lambeosaurus Hypertext Preprocessor (PHP)" is the name of this webpage. It looks to be a table of contents listing different PHP topics, suggesting that it is a resource for learning PHP. </h3>
+                </div>
+            </div>
+            <div class="developer">
+                <h3><span>Developed by:</span><i> LAMBEosaurus</i></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scriot.js"></script>
+</body>
+</html>
