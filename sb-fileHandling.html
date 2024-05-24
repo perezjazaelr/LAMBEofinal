@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <h3 onclick="fileHandling()">PHP File Handling</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="description">
+                <h6 class="marg-bot">In PHP, a file is a resource object, from which data can be read or written to in a linear fashion. The term "file handling" refers to a set of functions in PHP that enable read/write operations on disk files with PHP code.</h6>                
+                <h6>A file object is classified as a stream. Any resource on which linear read/write operations are done is a stream. Other stream-like objects are the TCP sockets, standard input stream, i.e., a system keyboard represented by "php://stdin", the standard output stream represented by "php://stdout", and the error stream "php://stderr".</h6>
+            </div>
+            <div class="wrap-box">
+                <div class="sub-header">
+                    <div class="line"></div>
+                    <h4>SUB-TOPICS</h4>
+                    <div class="line"></div>
+                </div>
+                <div class="sbgrid-box"> 
+                    <div class="box" onclick="OpenFile()"><h3>PHP - Open File</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="ReadFile()"><h3>PHP - Read File</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="WriteFile()"><h3>PHP - Write File </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="FileExistence()"><h3>PHP - File Existence </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="DownloadFile()"><h3>PHP - Download File </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="CopyFile()"><h3>PHP - Copy File </h3><i class="fa-regular fa-bookmark"></i></div> 
+                    <div class="box" onclick="AppendFile()"><h3>PHP - Append File </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="DeleteFile()"><h3>PHP - Delete File</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="HandleCSVFile()"><h3>PHP - Handle CSV File</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="FilePermissions()"><h3>PHP - File Permissions</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="CreateDirectory()"><h3>PHP - Create Directory</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="ListingFiles()"><h3>PHP - Listing Files</h3><i class="fa-regular fa-bookmark"></i></div>
+                <div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriot.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

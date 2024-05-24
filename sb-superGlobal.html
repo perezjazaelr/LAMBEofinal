@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <h3 onclick="superGlobal()">PHP Superglobals</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="description">
+                <h6 class="marg-bot">The PHP parser populates the current script with a number of predefined variables in its global namespace. The predefined variables are known as "PHP superglobals".</h6>
+                <h6>Most of the superglobals in PHP are associative arrays, and the web server populates them. Hence, if a script is run in the command-line environment, some of the superglobals may be empty.</h6>
+            </div>
+            <div class="wrap-box">
+                <div class="sub-header">
+                    <div class="line"></div>
+                    <h4>SUB-TOPICS</h4>
+                    <div class="line"></div>
+                </div>
+                <div class="sbgrid-box"> 
+                    <div class="box" onclick="$GLOBALS()"><h3>PHP - $GLOBALS </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="$_SERVER()"><h3>PHP - $_SERVER </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="$_REQUEST()"><h3>PHP - $_REQUEST </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="$_POST()"><h3>PHP - $_POST </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick=" $_GET()"><h3>PHP - $_GET </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="$_FILES()"><h3>PHP - $_FILES </h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="$_ENV()"><h3>PHP - $_ENV  </h3><i class="fa-regular fa-bookmark"></i></div> 
+                    <div class="box" onclick=" $_COOKIE()"><h3>PHP - $_COOKIE</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="$_SESSION()"><h3>PHP - $_SESSION</h3><i class="fa-regular fa-bookmark"></i></div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <script src="scriot.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

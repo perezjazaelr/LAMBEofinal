@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMBEosaurus</title>
+    <link rel="Website icon" type="png" href="Untitled-1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <h3 onclick="ajax()">PHP AJAX</h3>
+            <img onclick="home()" src="Untitled-1.png" alt="">
+        </div>
+        <div class="content-container">
+            <div class="description">
+                <h6 class="marg-bot">Using PHP with AJAX, we can parse an XML document from a local directory as well as on a server. The following example demonstrates how to parse XML with a web browser.</h6>
+                <h6 class="marg-bot">The client-end script renders a HTML form and defines a JavaScript function for sending a HTTP request to the server with XMLHttpRequest object.</h6>
+                <h6>On the server, a PHP script loads the DOM object from the required XML document, fetches the selected course from the $_REQUEST variable, and renders the details of the course chosen as the response back to the client.</h6>
+            </div>
+            <div class="wrap-box">
+                <div class="sub-header">
+                    <div class="line"></div>
+                    <h4>SUB-TOPICS</h4>
+                    <div class="line"></div>
+                </div>
+                <div class="sbgrid-box"> 
+                    <div class="box" onclick="ajaxIntroduction()"><h3>PHP - AJAX Introduction</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="ajaxSearch()"><h3>PHP - AJAX Search</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="ajaxXMLParser()"><h3>PHP - AJAX XML Parser</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="ajaxAutoComplete()"><h3>PHP - AJAX Auto Complete Search</h3><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="box" onclick="ajaxRSSFeed()"><h3>PHP - AJAX RSS Feed Example</h3><i class="fa-regular fa-bookmark"></i></div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <script src="scriot.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
